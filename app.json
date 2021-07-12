@@ -3,6 +3,7 @@
     "name": "demo",
     "slug": "demo",
     "version": "1.0.0",
+    "scheme": "mychat",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
