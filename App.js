@@ -14,8 +14,10 @@ const Stack = createStackNavigator();
 
 export default function App() {
   const linking = {
-    // prefixes: ['https://*.example.com', 'https://example.com'],
-    prefixes: [prefix],
+    prefixes: ['https://*.example.com', 'https://example.com'],
+    prefixes: ['https://app.example.com'],
+    prefixes: ['https://app.example.com', 'exp://*'],
+    // prefixes: [prefix],
     config: {
       screens: {
         Home: "home",
