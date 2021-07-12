@@ -14,6 +14,7 @@ export default function App() {
   return (
     <NavigationContainer linking={linking} fallback={<Text>Loading...</Text>}>
       {/* content */}
+      <View><Text>HEy</Text></View>
     </NavigationContainer>
   );
 }
