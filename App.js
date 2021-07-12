@@ -3,17 +3,39 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import * as Linking from 'expo-linking';
 import { NavigationContainer } from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 
-const prefix = Linking.createURL('/');
+import Home from './screens/Home';
+import Settings from './screens/Settings';
+
+const prefix = Linking.makeUrl('/');
+
+const Stack = createStackNavigator();
 
 export default function App() {
   const linking = {
-    prefixes: ['https://*.example.com', 'https://example.com'],
+    // prefixes: ['https://*.example.com', 'https://example.com'],
+    prefixes: [prefix],
+    config: {
+      screens: {
+        Home: "home",
+        Settings: "settings",
+      }
+    }
   };
 
   return (
     <NavigationContainer linking={linking} fallback={<Text>Loading...</Text>}>
-      {/* content */}
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={Home}
+        />
+        <Stack.Screen
+          name="Settings"
+          component={Settings}
+        />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
@@ -25,4 +47,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  card: {
+    padding: 100,
+  }
 });
