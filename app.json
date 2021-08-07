@@ -3,7 +3,7 @@
     "name": "demo",
     "slug": "demo",
     "version": "1.0.0",
-    "scheme": "exp",
+    "scheme": "https",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -18,13 +18,32 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "verifyLinkDemo"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.salonix.demo",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "portal.istemai.com",
+              "pathPrefix": "/l*"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"

@@ -1,0 +1,10 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+        "namespace": "android_app",
+        "package_name": "com.salonix.demo",
+        "sha256_cert_fingerprints": [
+            "5A:83:30:43:06:27:4A:11:4F:76:D5:DE:76:15:4B:9A:28:6E:54:B1:4F:10:EF:E1:D1:48:3B:13:1A:1C:55:06"
+        ]
+    }
+}]
